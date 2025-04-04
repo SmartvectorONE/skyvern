@@ -38,11 +38,11 @@ services:
       - BROWSER_TYPE=chromium-headful
       - ENABLE_OPENAI=true
       - LLM_KEY=OPENAI_GPT4O
-      - OPENAI_API_KEY=<your_openai_key>
+      - OPENAI_API_KEY=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
       # If you want to use other LLM provider, like azure and anthropic:
-      # - ENABLE_ANTHROPIC=true
-      # - LLM_KEY=ANTHROPIC_CLAUDE3.5_SONNET
-      # - ANTHROPIC_API_KEY=<your_anthropic_key>
+      - ENABLE_ANTHROPIC=true
+      - LLM_KEY=ANTHROPIC_CLAUDE3.5_SONNET
+      - ANTHROPIC_API_KEY=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
       # Microsoft Azure OpenAI support:
       # If you'd like to use Microsoft Azure OpenAI as your managed LLM service integration with Skyvern, use the environment variables below.
       # In your Microsoft Azure subscription, you will need to provision the OpenAI service and deploy a model, in order to utilize it.
@@ -100,6 +100,7 @@ services:
     #   A route for the UI: yourdomain.com -> localhost:8080
     #   A route for the artifact API: artifact.yourdomain.com -> localhost:9090 (maybe not needed)
       - VITE_WSS_BASE_URL=ws://localhost:8000/api/v1
+      - SKYVERN_TELEMETRY=false
     #   - VITE_ARTIFACT_API_BASE_URL=http://localhost:9090
     #   - VITE_API_BASE_URL=http://localhost:8000/api/v1
     #   - VITE_SKYVERN_API_KEY=<get this from "settings" in the Skyvern UI>
